@@ -1,16 +1,21 @@
-const ProductManager = require("./desaf_entregable1");
+const ProductManager = require("./desaf_entregable1.js")
+const producto = new ProductManager;
 
-let producto = new ProductManager();
+// console.log(producto.addProduct("Celular Samsung", "A 54", 14000000, "https://imagenes/a54", 100, 30))
+// console.log(producto.addProduct("Celular Iphone", "15 Plus", 2000000, "https://imagenes/iphone_15", 101, 20))
+// console.log(producto.addProduct("Notebook", "Notebook Gamer. 19pulgadas, rtx 3090, ssd1tb, 16gb ram", 4000000, "https://imagenes/notebook_gamer", 102, 10))
+// console.log(producto.addProduct("Teclado Mecanico", "Kumara k552", 90000, "https://imagenes/kumara_k552", 103, 48))
 
+// console.log(producto.deleteProduct(3))
 
-console.log(producto.addProduct("Pc gamer", "Pc gamer, rtx 3090, 1gb hdd, 16gb ram, 700w bronze plus", 2200000, "https://image.png", 24, 16))
-console.log(producto.addProduct("Ipad", "Ipad Pro", 500000, "https://image.png2", 7, 158))
-console.log(producto.getProducts());
+let productoActualizar = {
+    id:4,
+    title: "Mouse HyperX",
+    description: "HyperX 3 Series Black",
+    price: 80000,
+    thumbnail: "https://imagenes/HyperX_3_Series_Black",
+    code: 104,
+    stock: 27
+}
 
-console.log("******************************************************")
-
-console.log(producto.getProductById(2)); //puse el Id 2 para que me muestre el obj del Ipad y funciono, eso quiere decir que el metodo es 
-                                         //funcional y anda correctamente.
-                                         
-console.log("******************************************************")
-console.log(`Aqui los productos: ${producto.getProducts()}`);
+console.log(producto.updateProduct(4, productoActualizar));

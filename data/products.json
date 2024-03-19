@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "title": "Celular Samsung",
+        "description": "A 54",
+        "price": 14000000,
+        "thumbnail": "https://imagenes/a54",
+        "code": 124,
+        "stock": 30
+    },
+    {
+        "id": 2,
+        "title": "Celular Iphone",
+        "description": "15 Plus",
+        "price": 2000000,
+        "thumbnail": "https://imagenes/iphone_15",
+        "code": 125,
+        "stock": 20
+    },
+    {
+        "id": 4,
+        "title": "Mouse HyperX",
+        "description": "HyperX 3 Series Black",
+        "price": 80000,
+        "thumbnail": "https://imagenes/HyperX_3_Series_Black",
+        "code": 104,
+        "stock": 27
+    }
+]
