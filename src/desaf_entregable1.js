@@ -1,12 +1,12 @@
-const fs = require("fs")
-
+//const fs = require("fs")
+import fs from "fs"
 class ProductManager {
     #products;
     #path
-    static idProducto = 0;
+    static idProducto = 0; 
 
-    constructor() {
-        this.#path = "./data/products.json";
+    constructor(rutaArchivo) {
+        this.#path = rutaArchivo;
         this.#products = this.#leerProductosInFile();
     }
 
@@ -59,6 +59,8 @@ class ProductManager {
         };
         this.#products.push(nuevoProducto);
         this.#guardarArch();
+        this.#products = this.#leerProductosInFile(); 
+
         return `Producto agregado exitosamente `
     }
 
@@ -83,8 +85,11 @@ class ProductManager {
             const { id, ...rest } = objetoUpdate;
             this.#products[index] = { ...this.#products[index], ...rest }
             this.#guardarArch();
+            this.#products = this.#leerProductosInFile();
+
             msg = `Producto actualizado`;
         }
+
         return msg;
     }
 
@@ -94,6 +99,7 @@ class ProductManager {
         if (index !== -1) {
             this.#products = this.#products.filter(p => p.id !== id);
             this.#guardarArch();
+            this.#products = this.#leerProductosInFile(); 
             msg = `Producto elminado`
         }
         return msg;
@@ -101,4 +107,4 @@ class ProductManager {
     }
 }
 
-module.exports = ProductManager;
+export default ProductManager;
