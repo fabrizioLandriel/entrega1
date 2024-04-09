@@ -1,0 +1,47 @@
+[
+    {
+        "id": "5e824c38-085a-4079-b77c-8fac066b7693",
+        "title": "Producto de prueba 1",
+        "description": "Prueba description 1",
+        "price": "450",
+        "thumbnail": "https://prueba1.jpg",
+        "code": 1,
+        "stock": 150
+    },
+    {
+        "id": "eb2f60e7-79bb-452c-aafe-df5e278ff320",
+        "title": "Producto de prueba 5",
+        "description": "Prueba description 5",
+        "price": "4556",
+        "thumbnail": "https://prueba5.jpg",
+        "code": 5,
+        "stock": 1555
+    },
+    {
+        "id": "fda9960e-dd32-4279-abc2-531160edd94e",
+        "title": "Producto de cambio 4",
+        "description": "Prueba description CANMBIO 4",
+        "price": 3500,
+        "thumbnail": "https://prueba4.jpg",
+        "code": 4,
+        "stock": 19
+    },
+    {
+        "id": "22d455a3-81a1-4841-ab4f-a797ea575a24",
+        "title": "Producto de cambio 4",
+        "description": "Prueba description CANMBIO 4",
+        "price": "4542",
+        "thumbnail": "https://prueba4.jpg",
+        "code": 4,
+        "stock": 1542
+    },
+    {
+        "id": "5780f477-45bb-4003-bf28-d26f114fa104",
+        "title": "Producto agregado tonisho",
+        "description": "Prueba description tonisho",
+        "price": "3232",
+        "thumbnail": "https://toni.jpg",
+        "code": 7,
+        "stock": 87656
+    }
+]
