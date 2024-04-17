@@ -1,6 +1,8 @@
 import {Router} from "express";
 import { productManager } from "../app.js";
-import { ProductManager } from "../desaf_entregable1.js";
+import { ProductManager } from "../dao/desaf_entregable1.js";
+export const productManager = new ProductManager();
+
 const productsRouter = Router();
 
 productsRouter.get("/", async (req, res)=>{

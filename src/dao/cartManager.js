@@ -3,7 +3,7 @@ import { v4 as uuid } from 'uuid'
 
 export class CartManager {
     constructor(){
-        this.path = "cart.json"
+        this.path = "../cart.json"
         this.carts = [];
     }
 
