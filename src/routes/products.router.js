@@ -1,9 +1,8 @@
 import {Router} from "express";
-import { productManager } from "../app.js";
 import { ProductManager } from "../dao/desaf_entregable1.js";
-export const productManager = new ProductManager();
 
-const productsRouter = Router();
+const productManager = new ProductManager();
+export const productsRouter = Router();
 
 productsRouter.get("/", async (req, res)=>{
     try {
@@ -35,8 +34,8 @@ productsRouter.get("/:pid", async (req, res)=>{
 
 productsRouter.post("/", async (req, res)=>{
     try {
-        const { id, title, description, price, thumbnail, code, stock } = req.body;
-        const response = await productManager.addProduct({ id, title, description, price, thumbnail, code, stock })
+        const { title, description, price, thumbnail, code, stock } = req.body;
+        const response = await productManager.addProduct({ title, description, price, thumbnail, code, stock })
         res.json(response)
     } catch (error) {
         console.log(error)
@@ -47,7 +46,7 @@ productsRouter.post("/", async (req, res)=>{
 productsRouter.put("/:pid", async (req, res)=>{
     const {pid} = req.params;
     try {
-        const { id, title, description, price, thumbnail, code, stock } = req.body;
+        const { title, description, price, thumbnail, code, stock } = req.body;
         const response = await productManager.updateProduct(pid, {title, description, price, thumbnail, code, stock })
         res.json(response)
 
@@ -68,5 +67,3 @@ productsRouter.delete("/:pid", async (req, res)=>{
         res.json(`Error al intentar eliminar el producto con id ${pid}`)
     }
 })
-
-export {productsRouter}

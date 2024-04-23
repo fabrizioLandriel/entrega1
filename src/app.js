@@ -8,8 +8,6 @@ import { CartManager } from "./dao/cartManager.js";
 import { cartsRouter } from "./routes/carts.router.js";
 import views from "./routes/views.router.js";
 
-export const cartManager = new CartManager();
-
 const app = express();
 const PORT = 3000;
 
@@ -38,5 +36,6 @@ socketSv.on("connection", socket=>{
     socket.emit("productos", productos )
 
     socket.on("agregarProducto", producto=>{
+        const result =  p.addProduct(producto)
     })
 })

@@ -38,5 +38,5 @@ formulario.addEventListener('submit', function(event){
     }
 
     socket.emit("agregarProducto", producto)
-    formulario.
+    formulario.appendChild(producto)
 })

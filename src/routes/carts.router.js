@@ -1,7 +1,8 @@
 import {Router} from "express"
-import { cartManager } from "../app.js"
+import { CartManager } from "../dao/cartManager.js";
 
-const cartsRouter = Router();
+const cartManager = new CartManager();
+export const cartsRouter = Router();
 
 cartsRouter.post("/", async (req, res)=>{
     try {
@@ -31,5 +32,3 @@ cartsRouter.post("/:cid/products/:pid", async (req, res)=>{
         res.send("Error al intentar guardar producto en el carrito")
     }
 })
-
-export {cartsRouter}
